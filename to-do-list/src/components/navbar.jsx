@@ -23,8 +23,8 @@ export const Navbar = () => {
             ToDo
           </Typography>
           <Stack direction='row' spacing={2} >
-            <Button color='inherit'>Features</Button>
             <Button color='inherit'>About</Button>
+            <Button color='inherit'>Features</Button>
             <Button 
             color='inherit' 
             id='resources-button' 
@@ -56,9 +56,7 @@ export const Navbar = () => {
             horizontal: 'right',
           }}
           >
-            <MenuItem onClick={handleClose}
-             href="https://google.com"
-            >School Routine</MenuItem>
+            <MenuItem onClick={handleClose}>School Routine</MenuItem>
             <MenuItem onClick={handleClose}>groceries</MenuItem>
             <MenuItem onClick={handleClose}>skincare</MenuItem>
           </Menu>
