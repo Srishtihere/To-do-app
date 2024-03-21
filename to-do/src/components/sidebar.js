@@ -16,9 +16,9 @@ function Sidebar() {
 
   const deletetodo = (id) => {
     let templist = [...list];
-    templist = templist.filter((item) => item.id !== id );
+    templist = templist.filter((item) => item.id !== id);
     setlist([...templist]);
-  }
+  };
 
   const additem = () => {
     if (item === " ") return alert("add a valid input");
@@ -52,63 +52,36 @@ function Sidebar() {
                     <span className="ms-1 d-none d-sm-inline fs-4">Home</span>
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className=" bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline fs-4">My day</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className=" bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline fs-4">
-                      Important
-                    </span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className="bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline fs-4">
-                      Planned
-                    </span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className=" bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline fs-4">
-                      Assigned To me
-                    </span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className=" bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline fs-4">Tasks</span>
-                  </a>
-                </li>
               </ul>
               <hr />
             </div>
           </div>
           <div className="col py-3">
-            <div className="w-100 d-flex justify-content-center align-item-center" style={{height:'10%',}}>
-              <h1 className="align-self-center fs-1 text-light">
-                Tasks
-              </h1>
+            <div
+              className="w-100 d-flex justify-content-center align-item-center"
+              style={{ height: "10%" }}
+            >
+              <h1 className="align-self-center fs-1 text-light">Tasks</h1>
             </div>
-            <div 
+            <div
               className="w-100 d-flex justify-content-center align-item-center bg-img2"
-              style={{height:'80%',}}
-              >
+              style={{ height: "80%" }}
+            >
               <span className="align-self-start h-auto w-100 m-3">
                 {list.map((listitem) => (
-                  <TodoOutputCard key={listitem.id} name={listitem.name} id={listitem.id} deletetodohandler={deletetodo}/>
+                  <TodoOutputCard
+                    key={listitem.id}
+                    name={listitem.name}
+                    id={listitem.id}
+                    deletetodohandler={deletetodo}
+                  />
                 ))}
               </span>
             </div>
-            <div className="w-100 d-flex justify-content-center align-item-center" style={{height:'10%',}}>
+            <div
+              className="w-100 d-flex justify-content-center align-item-center"
+              style={{ height: "10%" }}
+            >
               <h3 className="w-100 align-self-end">
                 <div class="input-group" style={{ height: "50px" }}>
                   <button
@@ -128,7 +101,7 @@ function Sidebar() {
                     value={item}
                     aria-label="Example text with button addon"
                     aria-describedby="button-addon1"
-                    style={{backgroundColor:"rgba(137, 43, 226, 0.132)"}}
+                    style={{ backgroundColor: "rgba(137, 43, 226, 0.132)" }}
                   />
                 </div>
               </h3>
